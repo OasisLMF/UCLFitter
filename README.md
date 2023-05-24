@@ -6,7 +6,9 @@ See also: https://www.turing.ac.uk/research/research-projects/future-indonesian-
 Serge Guillas (UCL, PI), Dimitra Salmanidou (UCL, co-I), Rozana Himaz (UCL, co-I), Mohammad Heidarzadeh (Bath, co-I) and the Insurance Development Forum (IDF)
 
 Academic papers and project reports: https://github.com/OasisLMF/UCLFitter/tree/main/referencedBy 
+
 Model data: https://github.com/OasisLMF/UCLFitter/tree/main/model_data
+
 Model and data licence:  Attribution-NonCommercial-ShareAlike (CC BY-NC-SA). This license lets others remix, adapt, and build upon your work non-commercially, as long as they credit you and license their new creations under the identical terms. 
 
 Key outcomes (excerpted from End of project: Summary of outputs and impacts 27 February 2023):
