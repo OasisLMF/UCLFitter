@@ -1,7 +1,6 @@
 ## Future Indonesian Tsunamis: Towards End-to-end Risk quantification (FITTER)
 
-Lloyd's Tercentenary Research Foundation and Lighthill Risk Network funded research project executed by University College London (UCL) 
-See also: https://www.turing.ac.uk/research/research-projects/future-indonesian-tsunamis-towards-end-end-risk-quantification-fitter
+Lloyd's Tercentenary Research Foundation and Lighthill Risk Network funded research project executed by University College London (UCL). 
 
 Serge Guillas (UCL, PI), Dimitra Salmanidou (UCL, co-I), Rozana Himaz (UCL, co-I), Mohammad Heidarzadeh (Bath, co-I) and the Insurance Development Forum (IDF)
 
