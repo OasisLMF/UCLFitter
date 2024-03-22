@@ -48,10 +48,17 @@ Keywords: Tsunami risk; Preparedness; Preventive measures; Perception; Uncertain
 
 -----
 
-**Ehara, A., & Guillas, S. (2021a). An adaptive strategy for sequential designs of multilevel computer experiments**. Accepted, International Journal for Uncertainty Quantification
+**Ehara, A., & Guillas, S. (2023). An adaptive strategy for sequential designs of multilevel computer experiments**,
+International Journal for Uncertainty Quantification, Volume 13, Issue 4, 2023, pp. 61-98
+DOI: 10.1615/Int.J.UncertaintyQuantification.2023038376 (https://www.dl.begellhouse.com/journals/52034eb04b657aea,2298a33c737ab34a,646e965a6f64214f.html)
+
+Abstract: Investigating uncertainties in computer simulations can be prohibitive in terms of computational costs, since the simulator needs to be run over a large number of input values. Building an emulator, i.e., a statistical surrogate model of the simulator constructed using a design of experiments made of a comparatively small number of evaluations of the forward solver, greatly alleviates the computational burden to carry out such investigations. Nevertheless, this can still be above the computational budget for many studies. Two major approaches have been used to reduce the budget needed to build the emulator: efficient design of experiments, such as sequential designs, and combining training data of different degrees of sophistication in a so-called multifidelity method, or multilevel in case these fidelities are ordered typically for increasing resolutions. We present here a novel method that combines both approaches, the multilevel adaptive sequential design of computer experiments in the framework of Gaussian process (GP) emulators. We make use of reproducing kernel Hilbert spaces as a tool for our GP approximations of the differences between two consecutive levels. This dual strategy allows us to allocate efficiently limited computational resources over simulations of different levels of fidelity and build the GP emulator. The allocation of computational resources is shown to be the solution of a simple optimization problem in a special case where we theoretically prove the validity of our approach. Our proposed method is compared to other existing models of multifidelity Gaussian process emulation. Gains in orders of magnitudes in accuracy or computing budgets are demonstrated in some numerical examples for some settings. 
+Keywords: uncertainty quantification, surrogate models, Gaussian process, multifidelity, sequential design, reproducing kernel Hilbert spaces (RKHS) 
 
 -----
 
 **Li, K., Giles, D., Karvonen, T., Guillas, S., & Briol, F. X. (2022). Multilevel Bayesian Quadrature**. Accepted, AISTATS 2023.
+
+Abstract: Multilevel Monte Carlo is a key tool for approximating integrals involving expensive scientific models. The idea is to use approximations of the integrand to construct an estimator with improved accuracy over classical Monte Carlo. We propose to further enhance multilevel Monte Carlo through Bayesian surrogate models of the integrand, focusing on Gaussian process models and the associated Bayesian quadrature estimators. We show, using both theory and numerical experiments, that our approach can lead to significant improvements in accuracy when the integrand is expensive and smooth, and when the dimensionality is small or moderate. We conclude the paper with a case study illustrating the potential impact of our method in landslide-generated tsunami modelling, where the cost of each integrand evaluation is typically too large for operational settings. 
 
 -----
