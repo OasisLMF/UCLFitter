@@ -1,7 +1,7 @@
 {
     "source_tag": "MDK",
     "analysis_tag": "test_sumatra",
-    "model_name_id": "FITTER",
+    "model_name_id": "fitter_haz_Sum",
     "model_supplier_id": "UCL",
     "gul_threshold": 0,
     "gul_output": true,

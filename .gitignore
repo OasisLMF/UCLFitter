@@ -128,3 +128,10 @@ dmypy.json
 # Pyre type checker
 .pyre/
 footprint*
+
+# Model
+**/footprint.bin
+**/footprint.csv
+
+# runs
+**/runs/
