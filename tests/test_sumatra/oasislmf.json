@@ -1,8 +1,8 @@
 {
     "analysis_settings_json": "analysis_settings.json",
-    "lookup_config_json": "../../keys_data/lookup_config.json",
-    "lookup_data_dir": "../../keys_data",
-    "model_data_dir": "../../model_data/fitter_haz_Sum",
+    "lookup_config_json": "../../keys_data/sumatra/lookup_config.json",
+    "lookup_data_dir": "../../keys_data/sumatra",
+    "model_data_dir": "../../model_data/sumatra",
     "oed_location_csv": "location.csv",
     "oed_accounts_csv": "account.csv",
     "model_run_dir": "runs/test_sumatra"

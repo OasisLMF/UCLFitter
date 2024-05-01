@@ -1,0 +1,1 @@
+cat footprint_parts/footprint_part_00 footprint_parts/footprint_part_01 footprint_parts/footprint_part_02 > footprint.bin.z
