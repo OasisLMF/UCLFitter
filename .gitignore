@@ -129,9 +129,5 @@ dmypy.json
 .pyre/
 footprint*
 
-# Model
-**/footprint.bin
-**/footprint.csv
-
 # runs
 **/runs/
