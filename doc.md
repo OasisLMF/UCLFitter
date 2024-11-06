@@ -2,13 +2,13 @@
 
 # Future Indonesian Tsunamis: Towards End-to-end Risk quantification (FITTER)
 
-## Key Facts
+## Model Key Facts
 
 FITTER was funded by Lloyd's Tercentenary Research Foundation and Lighthill Risk Network funded research project executed by University College London (UCL).
 
-### Peril Region
+### Region and Peril
 
-TO DO
+Indonesia Tsunami
 
 ### Publisher
 
