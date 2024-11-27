@@ -6,9 +6,9 @@
 
 FITTER was funded by Lloyd's Tercentenary Research Foundation and Lighthill Risk Network funded research project executed by University College London (UCL).
 
-### Region and Peril
+### Peril Region
 
-Indonesia Tsunami
+TO DO
 
 ### Publisher
 
@@ -40,14 +40,18 @@ Tsunami hazard footprint files (qualitative intensity) developed through statist
 
 | Event Set | Type | Calculation Method | Countries | Number of events |
 |---|---|---|---|---|
-| Java_1 | probabilistic | simulated | ['IDN'] | 1278 |
-| Sumatra_1 | probabilistic | simulated | ['IDN'] | 730 |
+| Java_1 | probabilistic | simulated | IDN | 1278 |
+| Sumatra_1 | probabilistic | simulated | IDN | 730 |
+TO DO: add occurrence set information 
+
 ### Hazard information
 
-| Event Set | Hazard Process | Intensity measure | Trigger Event | Trigger Process |
+| Peril Code | Hazard Process | Intensity measure | Trigger Event | Trigger Process |
 |---|---|---|---|---|
-| QTS | ['tsunami'] | DI:- | earthquake | ['ground_motion'] |
-| QTS | ['tsunami'] | DI:- | earthquake | ['ground_motion'] |
+| QTS | tsunami | DI:- | earthquake | ground_motion |
+| QTS | tsunami | DI:- | earthquake | ground_motion |
+
+
 ## Vulnerability module
 
 **Title**: FITTER household and business vulnerability data
@@ -59,6 +63,8 @@ Social vulnerability curves in Oasis format, relating qualitative levels of tsun
 | Hazard type | Hazard process | Intensity |
 |---|---|---|
 | tsunami | tsunami | DI:- |
+
+
 ### Vulnerability functions
 
 **Exposure category**: population
@@ -78,6 +84,68 @@ Social vulnerability curves in Oasis format, relating qualitative levels of tsun
 ### Further details
 
 The curves to estimate impact on household business assets and business recovery are developed using longitudinal household survey data (two waves of the STAR longitudinal survey carried out in Banda Aceh, Sumatra, 5–14 and 17–29 months after the 2004 Indian Ocean tsunami. See https://www.sciencedirect.com/science/article/pii/S2212420922000875
+
+## Coverage types and modifiers
+
+### Exposure category
+
+Buildings
+
+### Coverages
+
+| Coverage Type | Supported? |
+|---|---|
+| Buildings | Yes |
+| Other | No |
+| Contents | Yes |
+| Business Interruption | No |
+
+
+### Primary modifiers
+
+| OED field | Required? | Comments |
+|---|---|---|
+| OccupancyCode | No |  |
+| ConstructionCode | No |  |
+| NumberOfStories | No |  |
+| YearBuilt | No |  |
+| FloorArea | No |  |
+
+
+### Secondary modifiers
+
+| OED field | Comments |
+|---|---|
+
+
+For lists of supported values please see 'Reference Tables' section below
+
+## Geographical schemes
+
+### Broad scope
+
+**Spatial scale**: sub-national
+
+| Country Code | Country name |
+|---|---|
+| IDN | Indonesia |
+### Geographical schemes
+
+TO DO
+
+## Reference tables
+
+The following reference tables contain key model definitions and lists of supported values for exposure attributes.
+
+TO DO
+
+### ['intensity_bin_dict.csv']
+
+### ['areaperil_dict.csv']
+
+### ['damage_bin_dict.csv']
+
+### ['vulnerability_dict.csv']
 
 This document has been generated using Risk Data Library Standard schema version 0.2.
 
