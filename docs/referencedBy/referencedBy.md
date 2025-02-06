@@ -1,0 +1,64 @@
+The FITTER project team has published a number of peer-reviewed papers on the methodology of the project:
+
+
+**Rozana Himaz, Business recovery in Aceh and North Sumatra following the Indian Ocean Tsunami**,
+International Journal of Disaster Risk Reduction, Volume 73, 2022, 102868,
+https://doi.org/10.1016/j.ijdrr.2022.102868. (https://www.sciencedirect.com/science/article/pii/S2212420922000875)
+
+Abstract: This paper looks at patterns in business recovery two years after the 2004 Indian Ocean tsunami using longitudinal household survey data for Aceh and North Sumatra gathered 5–14 months and 17–28 months after the event. The base sample contains 2879 households. Applying a weighted probit model that controls for pre-tsunami characteristics the paper finds that the probability of households discontinuing businesses two years after the event increases significantly by 9.6% points in heavy damage areas compared to no/light damage areas. The paper argues that the differences in business recovery may be due to differences in asset recovery patterns. The tsunami wiped out 2/3rd the value of business assets in heavy damage areas and two years later, stocks were still at only half the pre-tsunami values. For these areas business asset growth was significantly correlated with continuity. Higher business discontinuity in heavy damage areas may also be due to higher losses to family and financial support networks experienced by households in these areas with a third of those that discontinued being in temporary accommodation for 6 months or longer. Increased aid and cash-for-work initiatives are unlikely to have been a disincentive to business continuation. The results suggest that given sufficient reconstruction of public infrastructure, asset recovery through livelihood interventions and formal financial market mechanisms is central to business continuity. It also suggests a closer investigation of households that have been displaced for a longer period as the support they require maybe systematically different to support required by other households.
+Keywords: Tsunami; Disaster; Business recovery; Livelihoods; Indonesia
+
+-----
+
+
+**Dimitra M. Salmanidou, Ayao Ehara, Rozana Himaz, Mohammad Heidarzadeh, Serge Guillas,
+Impact of future tsunamis from the Java trench on household welfare: Merging geophysics and economics through catastrophe modelling**,
+International Journal of Disaster Risk Reduction, Volume 61, 2021, 102291,
+https://doi.org/10.1016/j.ijdrr.2021.102291. (https://www.sciencedirect.com/science/article/pii/S2212420921002570)
+
+Abstract: This paper presents the first end-to-end example of a risk model for loss of assets in households due to possible future tsunamis. There is a significant need for Government to assess the generic risk to buildings, and the concrete impact on the full range of assets of households, including the ones that are key to livelihoods such as agricultural land, fishing boats, livestock and equipment. Our approach relies on the Oasis Loss Modelling Framework to integrate hazard and risk. We first generate 25 representative events of tsunamigenic earthquakes off the Southern coast of Java, Indonesia. We then create a new vulnerability function based upon the Indonesian household survey STAR1 of how much assets have been reduced in each household after the 2004 tsunami. We run a multinomial logit regression to precisely allocate the probabilistic impacts to bins that correspond with levels of financial reduction in assets. We focus on the town of Cilacap for which we build loss exceedance curves, which represent the financial losses that may be exceeded at a range of future timelines, using future tsunami inundations over a surveyed layout and value of assets over the city. Our loss calculations show that losses increase sharply, especially for events with return periods beyond 250 years. These series of computations will allow more accurate investigations of impacts on livelihoods and thus will help design mitigation strategies as well as policies to minimize suffering from tsunamis.
+Keywords: Natural disasters; Risk modelling; Insurance; Vulnerability; Disaster risk finance; Indonesia
+
+-----
+
+**Ehara, A., Salmanidou, D.M., Heidarzadeh, M. and Guillas, S., (2023), 
+Multi-level emulation of tsunami simulations over Cilacap, South Java, Indonesia**, 
+Computational Geosciences 27(1), 127–142.
+
+Abstract: Carrying out a Probabilistic Tsunami Hazard Assessment (PTHA) requires a large number of simulations done at a high resolution. Statistical emulation builds a surrogate to replace the simulator and thus reduces computational costs when propagating uncertainties from the earthquake sources to the tsunami inundations. To reduce further these costs, we propose here to build emulators that exploit multiple levels of resolution and a sequential design of computer experiments. By running a few tsunami simulations at high resolution and many more simulations at lower resolutions we are able to provide realistic assessments whereas, for the same budget, using only the high resolution tsunami simulations do not provide a satisfactory outcome. As a result, PTHA can be considered with higher precision using the highest spatial resolutions, and for impacts over larger regions. We provide an illustration to the city of Cilacap in Indonesia that demonstrates the benefit of our approach.
+DOI: 10.1007/s10596-022-10183-1 (https://doi.org/10.1007/s10596-022-10183-1)
+
+-----
+
+**Pranantyo, I. R., Heidarzadeh, M., & Cummins, P. R. (2021). 
+Complex tsunami hazards in eastern Indonesia from seismic and non-seismic sources: Deterministic modelling based on historical and modern data**, Geoscience Letters, 8(1), 1-16.
+
+Abstract: Eastern Indonesia is one of the world’s most complex regions in terms of tsunami hazards, as it accommodates numerous seismic and non-seismic tsunami sources with a history of deadly tsunamis. This study is an effort to enhance tsunami hazard knowledge in eastern Indonesia where limited data and analyses exist. We provide a brief understanding of eastern Indonesia’s tsunami hazards by modelling selected deterministic tsunami scenarios from tectonic, submarine mass failure (SMF), and volcanic sources. To our knowledge, this is the first time that tsunami hazards modelling from such diverse sources in Indonesia has been performed. Our methodology is a deterministic tsunami hazard analysis considering credible tsunami sources from historical and contemporary data, modelling them using state-of-the-art simulation tools. We modelled two Mw7.8 tsunamigenic earthquake scenarios on the Flores back-arc thrust, one rupturing the basal fault (FBT-BF) and the other rupturing the splay fault (FBT-SF), showing that the two scenarios produce maximum tsunami amplitudes of 5.3 m and 4.2 m, respectively, which are comparable to the deadly 1992 Flores tsunami. We modelled potential SMF-generated tsunamis in the Makassar Strait with SMF volumes of 5km^3 and 225km^3 which yielded maximum tsunami heights of 1.1 m and 4.3 m along the eastern coast of Kalimantan Island and 2.9 m and 11.1 m along the west shore of Sulawesi Island, respectively. The 1871 Ruang volcanic tsunami is studied through existing historical documents and a source model is proposed comprising a flank collapse with volume of 0.10km^3. Such a source model successfully reproduced the 25 m runup reported in a historical account.
+DOI: 10.1186/s40562-021-00190-y (https://doi.org/10.1186/s40562-021-00190-y)
+
+-----
+
+**Irina Rafliana, Fatemeh Jalayer, Andrea Cerase, et al.,
+Tsunami risk communication and management: Contemporary gaps and challenges**,
+International Journal of Disaster Risk Reduction, Volume 70, 2022,102771,
+https://doi.org/10.1016/j.ijdrr.2021.102771. (https://www.sciencedirect.com/science/article/pii/S2212420921007329)
+
+Abstract: Very large tsunamis are associated with low probabilities of occurrence. In many parts of the world, these events have usually occurred in a distant time in the past. As a result, there is low risk perception and a lack of collective memories, making tsunami risk communication both challenging and complex. Furthermore, immense challenges lie ahead as population and risk exposure continue to increase in coastal areas. Through the last decades, tsunamis have caught coastal populations off-guard, providing evidence of lack of preparedness. Recent tsunamis, such as the Indian Ocean Tsunami in 2004, 2011 Tohoku and 2018 Palu, have shaped the way tsunami risk is perceived and acted upon. Based on lessons learned from a selection of past tsunami events, this paper aims to review the existing body of knowledge and the current challenges in tsunami risk communication, and to identify the gaps in the tsunami risk management methodologies. The important lessons provided by the past events call for strengthening community resilience and improvement in risk-informed actions and policy measures. This paper shows that research efforts related to tsunami risk communication remain fragmented. The analysis of tsunami risk together with a thorough understanding of risk communication gaps and challenges is indispensable towards developing and deploying comprehensive disaster risk reduction measures. Moving from a broad and interdisciplinary perspective, the paper suggests that probabilistic hazard and risk assessments could potentially contribute towards better science communication and improved planning and implementation of risk mitigation measures.
+Keywords: Tsunami risk; Preparedness; Preventive measures; Perception; Uncertainties; NEAM Region
+
+-----
+
+**Ehara, A., & Guillas, S. (2023). An adaptive strategy for sequential designs of multilevel computer experiments**,
+International Journal for Uncertainty Quantification, Volume 13, Issue 4, 2023, pp. 61-98
+DOI: 10.1615/Int.J.UncertaintyQuantification.2023038376 (https://www.dl.begellhouse.com/journals/52034eb04b657aea,2298a33c737ab34a,646e965a6f64214f.html)
+
+Abstract: Investigating uncertainties in computer simulations can be prohibitive in terms of computational costs, since the simulator needs to be run over a large number of input values. Building an emulator, i.e., a statistical surrogate model of the simulator constructed using a design of experiments made of a comparatively small number of evaluations of the forward solver, greatly alleviates the computational burden to carry out such investigations. Nevertheless, this can still be above the computational budget for many studies. Two major approaches have been used to reduce the budget needed to build the emulator: efficient design of experiments, such as sequential designs, and combining training data of different degrees of sophistication in a so-called multifidelity method, or multilevel in case these fidelities are ordered typically for increasing resolutions. We present here a novel method that combines both approaches, the multilevel adaptive sequential design of computer experiments in the framework of Gaussian process (GP) emulators. We make use of reproducing kernel Hilbert spaces as a tool for our GP approximations of the differences between two consecutive levels. This dual strategy allows us to allocate efficiently limited computational resources over simulations of different levels of fidelity and build the GP emulator. The allocation of computational resources is shown to be the solution of a simple optimization problem in a special case where we theoretically prove the validity of our approach. Our proposed method is compared to other existing models of multifidelity Gaussian process emulation. Gains in orders of magnitudes in accuracy or computing budgets are demonstrated in some numerical examples for some settings. 
+Keywords: uncertainty quantification, surrogate models, Gaussian process, multifidelity, sequential design, reproducing kernel Hilbert spaces (RKHS) 
+
+-----
+
+**Li, K., Giles, D., Karvonen, T., Guillas, S., & Briol, F. X. (2022). Multilevel Bayesian Quadrature**. Accepted, AISTATS 2023.
+
+Abstract: Multilevel Monte Carlo is a key tool for approximating integrals involving expensive scientific models. The idea is to use approximations of the integrand to construct an estimator with improved accuracy over classical Monte Carlo. We propose to further enhance multilevel Monte Carlo through Bayesian surrogate models of the integrand, focusing on Gaussian process models and the associated Bayesian quadrature estimators. We show, using both theory and numerical experiments, that our approach can lead to significant improvements in accuracy when the integrand is expensive and smooth, and when the dimensionality is small or moderate. We conclude the paper with a case study illustrating the potential impact of our method in landslide-generated tsunami modelling, where the cost of each integrand evaluation is typically too large for operational settings. 
+
+-----
