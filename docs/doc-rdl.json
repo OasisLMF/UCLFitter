@@ -115,7 +115,7 @@
                 "processes": [
                   "tsunami"
                 ],
-                "intensity_measure": "DI:-",
+                "intensity_measure": "d_tsi:m",
                 "trigger": {
                   "type": "earthquake",
                   "processes": [
@@ -156,7 +156,7 @@
                 "processes": [
                   "tsunami"
                 ],
-                "intensity_measure": "DI:-",
+                "intensity_measure": "d_tsi:m",
                 "trigger": {
                   "type": "earthquake",
                   "processes": [
@@ -318,7 +318,7 @@
         "hazard_primary": "tsunami",
         "hazard_process_primary": "tsunami",
         "hazard_analysis_type": "empirical",
-        "intensity": "DI:-",
+        "intensity": "d_tsi:m",
         "category": "buildings",
         "taxonomy": "OED",
         "impact": {
