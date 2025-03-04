@@ -1,0 +1,534 @@
+{
+  "datasets": [
+    {
+      "id": "fitter_haz",
+      "title": "FITTER hazard data - tsunami intensity damage index",
+      "description": "Tsunami hazard footprint files (qualitative intensity) developed through statistical emulation for Java and Sumatra, Indonesia in Oasis format",
+      "risk_data_type": [
+        "hazard"
+      ],
+      "publisher": {
+        "name": "University College London / Alan Turing Institute",
+        "email": "s.guillas@ucl.ac.uk",
+        "url": "https://www.ucl.ac.uk/risk-disaster-reduction/research-projects/2024/jan/future-indonesian-tsunamis-towards-end-end-quantification-risk-fitter"
+      },
+      "version": "1",
+      "purpose": "Create a national scale tsunami model in Oasis format",
+      "project": "Future Indonesian Tsunamis: Towards End-to-end Risk quantification (FITTER)",
+      "details": "FITTER was funded by Lloyd's Tercentenary Research Foundation and Lighthill Risk Network funded research project executed by University College London (UCL).",
+      "spatial": {
+        "countries": [
+          "IDN"
+        ],
+        "scale": "national",
+        "gazetteer_entries": [
+          {
+            "id": "fitter_haz_Sum",
+            "scheme": "GEONAMES",
+            "description": "Sumatra, Indonesia",
+            "uri": "https://www.geonames.org/1626198/sumatra.html"
+          },
+          {
+            "id": "fitter_haz_Java",
+            "scheme": "GEONAMES",
+            "description": "Java, Indonesia",
+            "uri": "https://www.geonames.org/1642673/java.html"
+          }
+        ]
+      },
+      "license": "CC-BY-NC-SA-4.0",
+      "contact_point": {
+        "name": "Serge Guillas, UCL",
+        "email": "s.guillas@ucl.ac.uk",
+        "url": "https://www.ucl.ac.uk/statistics/people/sergeguillas"
+      },
+      "creator": {
+        "name": "Dimitra Salmanidou",
+        "email": "d.salmanidou.12@ucl.ac.uk",
+        "url": "https://www.researchgate.net/profile/Dimitra-Salmanidou"
+      },
+      "attributions": [
+        {
+          "id": "fitter_haz_distr",
+          "entity": {
+            "name": "Oasis LMF",
+            "url": "https://www.oasislmf.org"
+          },
+          "role": "distributor"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "fitter_haz_CG23",
+          "name": "Multi-level emulation of tsunami simulations over Cilacap, South Java, Indonesia",
+          "author_names": [
+            "\"Ehara A.",
+            " Salmanidou D.M.",
+            " Heidarzadeh M.",
+            " Guillas S.\""
+          ],
+          "date_published": "2022-12-21",
+          "url": "https://link.springer.com/article/10.1007/s10596-022-10183-1",
+          "doi": "10.1007/s10596-022-10183-1"
+        }
+      ],
+      "resources": [
+        {
+          "id": "haz_intensity_bin_dict",
+          "title": "Intensity Bin Dictionary file for FITTER model",
+          "description": "Hazard intensity measure ranges used in model",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/haz/intensity_bin_dict.csv"
+        }
+      ],
+      "hazard": {
+        "event_sets": [
+          {
+            "id": "Java_1",
+            "analysis_type": "probabilistic",
+            "frequency_distribution": "user_defined",
+            "seasonality": "uniform",
+            "calculation_method": "simulated",
+            "event_count": 1278,
+            "occurrence_range": "1 to 15324 years",
+            "spatial": {
+              "countries": [
+                "IDN"
+              ],
+              "bbox": [105.62173, 114.43404, -8.54748, -5.88703],
+              "gazetteer_entries": [
+                {
+                  "id": "fitter_haz_Java_sp",
+                  "scheme": "ISO 3166-2",
+                  "description": "ID"
+                }
+              ]
+            },
+            "temporal": {
+              "duration": "P15324Y"
+            },
+            "hazards": [
+              {
+                "id": "QTS",
+                "type": "tsunami",
+                "processes": [
+                  "tsunami"
+                ],
+                "intensity_measure": "d_tsi:m",
+                "trigger": {
+                  "type": "earthquake",
+                  "processes": [
+                    "ground_motion"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "Sumatra_1",
+            "analysis_type": "probabilistic",
+            "frequency_distribution": "user_defined",
+            "seasonality": "uniform",
+            "calculation_method": "simulated",
+            "event_count": 730,
+            "occurrence_range": "1 to 15043 years",
+            "spatial": {
+              "countries": [
+                "IDN"
+              ],
+              "bbox": [95.128774, 105.370721, -5.592648, 5.891494],
+              "gazetteer_entries": [
+                {
+                  "id": "fitter_haz_Sumatra_sp",
+                  "scheme": "ISO 3166-2",
+                  "description": "ID"
+                }
+              ]
+            },
+            "temporal": {
+              "duration": "P15043Y"
+            },
+            "hazards": [
+              {
+                "id": "QTS",
+                "type": "tsunami",
+                "processes": [
+                  "tsunami"
+                ],
+                "intensity_measure": "d_tsi:m",
+                "trigger": {
+                  "type": "earthquake",
+                  "processes": [
+                    "ground_motion"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    },
+    {
+      "id": "fitter_exp",
+      "title": "FITTER exposure data - for Sumatra and Java, and test acc and loc data",
+      "description": "Household and business asset values for Java and Sumatra, for the UCL FITTER tsunami modelling project. Additional test data included. ",
+      "risk_data_type": [
+        "exposure"
+      ],
+      "publisher": {
+        "name": "University College London / Alan Turing Institute",
+        "email": "s.guillas@ucl.ac.uk",
+        "url": "https://www.ucl.ac.uk/risk-disaster-reduction/research-projects/2024/jan/future-indonesian-tsunamis-towards-end-end-quantification-risk-fitter"
+      },
+      "version": "1",
+      "purpose": "Demonstrate the use of the FITTER model, with test portfolio containing blanket building TIV",
+      "project": "Future Indonesian Tsunamis: Towards End-to-end Risk quantification (FITTER)",
+      "details": "FITTER was funded by Lloyd's Tercentenary Research Foundation and Lighthill Risk Network funded research project executed by University College London (UCL).",
+      "spatial": {
+        "countries": [
+          "IDN"
+        ],
+        "scale": "national",
+        "gazetteer_entries": [
+          {
+            "id": "fitter_exp_Sum",
+            "scheme": "GEONAMES",
+            "description": "Sumatra, Indonesia",
+            "uri": "https://www.geonames.org/1626198/sumatra.html"
+          },
+          {
+            "id": "fitter_exp_Java",
+            "scheme": "GEONAMES",
+            "description": "Java, Indonesia",
+            "uri": "https://www.geonames.org/1642673/java.html"
+          }
+        ]
+      },
+      "license": "CC-BY-NC-SA-4.0",
+      "contact_point": {
+        "name": "Serge Guillas, UCL",
+        "email": "s.guillas@ucl.ac.uk",
+        "url": "https://www.ucl.ac.uk/statistics/people/sergeguillas"
+      },
+      "creator": {
+        "name": "Serge Guillas",
+        "email": "s.guillas@ucl.ac.uk",
+        "url": "https://www.ucl.ac.uk/statistics/people/sergeguillas"
+      },
+      "exposure": {
+        "category": "buildings",
+        "taxonomy": "OED",
+        "metrics": [
+          {
+            "id": "1",
+            "dimension": "structure",
+            "quantity_kind": "currency"
+          },
+          {
+            "id": "3",
+            "dimension": "content",
+            "quantity_kind": "currency"
+          }
+        ]
+      },
+      "attributions": [
+        {
+          "id": "fitter_exp_distr",
+          "entity": {
+            "name": "Oasis LMF",
+            "url": "https://www.oasislmf.org"
+          },
+          "role": "distributor"
+        }
+      ],
+      "resources": [
+        {
+          "id": "ExposureRequiredFields",
+          "title": "Exposure Required Fields",
+          "description": "Describes the exposure format and fields required for modelling.",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/exp/ExposureRequiredFields.csv"
+        },
+        {
+          "id": "account",
+          "title": "Example account file",
+          "description": "A sample exposure account file which can be run through the model.",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/exp/account.csv"
+        },
+        {
+          "id": "location",
+          "title": "Example location file",
+          "description": "A sample exposure location file which can be run through the model.",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/exp/location.csv"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    },
+    {
+      "id": "fitter_vln",
+      "title": "FITTER household and business vulnerability data",
+      "description": "Social vulnerability curves in Oasis format, relating qualitative levels of tsunami damage to percentage reduction in household and business asset value.",
+      "risk_data_type": [
+        "vulnerability"
+      ],
+      "publisher": {
+        "name": "University College London / Alan Turing Institute",
+        "email": "s.guillas@ucl.ac.uk",
+        "url": "https://www.ucl.ac.uk/risk-disaster-reduction/research-projects/2024/jan/future-indonesian-tsunamis-towards-end-end-quantification-risk-fitter"
+      },
+      "version": "1",
+      "purpose": "Test and demonstrate the application of household data to develop social vulnerability curves in a catastrophe modelling framework",
+      "project": "Future Indonesian Tsunamis: Towards End-to-end Risk quantification (FITTER)",
+      "details": "FITTER was funded by Lloyd's Tercentenary Research Foundation and Lighthill Risk Network funded research project executed by University College London (UCL).",
+      "spatial": {
+        "countries": [
+          "IDN"
+        ],
+        "scale": "national"
+      },
+      "license": "CC-BY-NC-SA-4.0",
+      "contact_point": {
+        "name": "Rozana Himaz",
+        "email": "r.himaz@ucl.ac.uk",
+        "url": "https://profiles.ucl.ac.uk/83535-rozana-himaz"
+      },
+      "creator": {
+        "name": "Rozana Himaz",
+        "email": "r.himaz@ucl.ac.uk",
+        "url": "https://profiles.ucl.ac.uk/83535-rozana-himaz"
+      },
+      "vulnerability": {
+        "hazard_primary": "tsunami",
+        "hazard_process_primary": "tsunami",
+        "hazard_analysis_type": "empirical",
+        "intensity": "d_tsi:m",
+        "category": "buildings",
+        "taxonomy": "OED",
+        "impact": {
+          "type": "direct",
+          "metric": "economic_loss_value - household asset and business asset values",
+          "unit": "percentage",
+          "base_data_type": "observed"
+        },
+        "spatial": {
+          "countries": [
+            "IDN"
+          ],
+          "scale": "sub-national"
+        },
+        "functions": {
+          "vulnerability": {
+            "approach": "empirical",
+            "relationship": "discrete"
+          }
+        },
+        "analysis_details": "The curves to estimate impact on household business assets and business recovery are developed using longitudinal household survey data (two waves of the STAR longitudinal survey carried out in Banda Aceh, Sumatra, 5–14 and 17–29 months after the 2004 Indian Ocean tsunami. See https://www.sciencedirect.com/science/article/pii/S2212420922000875",
+        "cost": [
+          {
+            "id": "1",
+            "dimension": "structure",
+            "unit": "IDR"
+          },
+          {
+            "id": "3",
+            "dimension": "content",
+            "unit": "IDR"
+          }
+        ]
+      },
+      "attributions": [
+        {
+          "id": "fitter_vln_distr",
+          "entity": {
+            "name": "Oasis LMF",
+            "url": "https://www.oasislmf.org"
+          },
+          "role": "distributor"
+        }
+      ],
+      "sources": [
+        {
+          "id": "fitter_vuln_STAR",
+          "name": "Study of the Tsunami Aftermath and Recovery (STAR)",
+          "url": "http://stardata.org/",
+          "type": "dataset",
+          "component": "vulnerability"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "fitter_vuln_IJDRR22",
+          "name": "Business recovery in Aceh and North Sumatra following the Indian Ocean Tsunami",
+          "author_names": [
+            "Rozana Himaz"
+          ],
+          "date_published": "2022-04-15",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420922000875?via%3Dihub",
+          "doi": "10.1016/j.ijdrr.2022.102868"
+        }
+      ],
+      "resources": [
+        {
+          "id": "vulnerability_dict",
+          "title": "Vulnerability function dictionary",
+          "description": "A list of vulnerability functions used in the model with associated attributes",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/vln/vulnerability_dict.csv"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    },
+    {
+      "id": "fitter_los",
+      "title": "FITTER loss data",
+      "description": "A set of ground up loss results for the sample property exposure is provided as an example of model output.",
+      "risk_data_type": [
+        "loss"
+      ],
+      "publisher": {
+        "name": "University College London / Alan Turing Institute",
+        "email": "s.guillas@ucl.ac.uk",
+        "url": "https://www.ucl.ac.uk/risk-disaster-reduction/research-projects/2024/jan/future-indonesian-tsunamis-towards-end-end-quantification-risk-fitter"
+      },
+      "version": "1",
+      "project": "Future Indonesian Tsunamis: Towards End-to-end Risk quantification (FITTER)",
+      "details": "FITTER was funded by Lloyd's Tercentenary Research Foundation and Lighthill Risk Network funded research project executed by University College London (UCL).",
+      "spatial": {
+        "countries": [
+          "IDN"
+        ],
+        "scale": "national",
+        "gazetteer_entries": [
+          {
+            "id": "fitter_los_Sum",
+            "scheme": "GEONAMES",
+            "description": "Sumatra, Indonesia",
+            "uri": "https://www.geonames.org/1626198/sumatra.html"
+          },
+          {
+            "id": "fitter_los_Java",
+            "scheme": "GEONAMES",
+            "description": "Java, Indonesia",
+            "uri": "https://www.geonames.org/1642673/java.html"
+          }
+        ]
+      },
+      "license": "CC-BY-NC-SA-4.0",
+      "contact_point": {
+        "name": "Serge Guillas, UCL",
+        "email": "s.guillas@ucl.ac.uk",
+        "url": "https://www.ucl.ac.uk/statistics/people/sergeguillas"
+      },
+      "creator": {
+        "name": "Dimitra Salmanidou",
+        "email": "d.salmanidou.12@ucl.ac.uk",
+        "url": "https://www.researchgate.net/profile/Dimitra-Salmanidou"
+      },
+      "attributions": [
+        {
+          "id": "fitter_los_distr",
+          "entity": {
+            "name": "Oasis LMF",
+            "url": "https://www.oasislmf.org"
+          },
+          "role": "distributor"
+        }
+      ],
+      "referenced_by": [
+        {
+          "id": "fitter_los_IJDRR21",
+          "name": "Impact of future tsunamis from the Java trench on household welfare: Merging geophysics and economics through catastrophe modelling",
+          "author_names": [
+            "\"Dimitra M. Salmanidou",
+            " Ayao Ehara",
+            " Rozana Himaz",
+            " Mohammad Heidarzadeh",
+            " Serge Guillas\""
+          ],
+          "date_published": "2021-04-26",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212420921002570",
+          "doi": "10.1016/j.ijdrr.2021.102291"
+        }
+      ],
+      "resources": [
+        {
+          "id": "gul_S1_aalcalc",
+          "title": "Ground up AAL",
+          "description": "Ground up Average Annual Loss report for the sample exposure file.",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/los/gul_S1_aalcalc.csv"
+        },
+        {
+          "id": "gul_S1_eltcalc",
+          "title": "Ground up ELT",
+          "description": "Ground up Event Loss Table report for the sample exposure file.",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/los/gul_S1_eltcalc.csv"
+        },
+        {
+          "id": "gul_S1_leccalc_full_uncertainty_aep",
+          "title": "Ground up Aggregate LEC",
+          "description": "Aggregate Exceedance Probability report for the sample exposure file.",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/los/gul_S1_leccalc_full_uncertainty_aep.csv"
+        },
+        {
+          "id": "gul_S1_leccalc_full_uncertainty_oep",
+          "title": "Ground up Occurrence LEC",
+          "description": "Occurrence Loss Exceedance Curve report for the sample exposure file.",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/los/gul_S1_leccalc_full_uncertainty_oep.csv"
+        },
+        {
+          "id": "gul_S1_summary-info",
+          "title": "Ground up Summary Info",
+          "description": "Describes the summary level for the Ground Up loss reports.",
+          "media_type": "text/csv",
+          "format": "csv",
+          "download_url": "resources/los/gul_S1_summary-info.csv"
+        },
+        {
+          "id": "analysis_settings",
+          "title": "Analysis settings for modelled losses",
+          "description": "The Oasis analysis settings file for modelled losses of sample exposure location file.",
+          "media_type": "application/json",
+          "format": "json",
+          "download_url": "resources/los/analysis_settings.json"
+        }
+      ],
+      "links": [
+        {
+          "href": "https://docs.riskdatalibrary.org/en/0__2__0/rdls_schema.json",
+          "rel": "describedby"
+        }
+      ]
+    }
+  ]
+}

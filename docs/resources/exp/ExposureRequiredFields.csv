@@ -1,0 +1,5 @@
+Field,Scheme,File,Description,Valid values
+LocPerilsCovered,OED,location,The perils to which the location is at risk.,"""QTS"", or group peril codes ""QQ1"" and ""AA1"""
+CountryCode,OED,location,The OED country code for the location,"""IN"""
+Latitude,OED,location,The latitude of the location (decimal),Floating point number
+Longitude,OED,location,The longitude of the location (decimal),Floating point number
