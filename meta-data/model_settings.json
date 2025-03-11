@@ -1,0 +1,24 @@
+{
+    "model_settings":{
+        "event_set":{
+            "name": "Event Set",
+            "desc": "Event Set selection",
+            "default": "",
+            "options":[]
+         },
+        "event_occurrence_id":{
+            "name": "Occurrence Set",
+            "desc": "Occurrence selection",
+            "default": "",
+            "options":[]
+        }
+     },
+    "lookup_settings":{
+        "supported_perils":[
+           {"id": "QTS", "desc": "Single Peril: Tsunami"},
+        ]
+    },
+    "data_settings": {
+	"group_fields": ["PortNumber", "AccNumber", "LocNumber"]
+    }
+}
