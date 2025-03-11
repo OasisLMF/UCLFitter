@@ -118,7 +118,7 @@ services:
    environment:
      <<: *shared-env
    volumes: *shared-volumes
-  v1-worker:
+  v1-worker-java:
     restart: always
     image: ${WORKER_IMG:-coreoasis/model_worker}:${VERS_WORKER:-latest}
     build:
@@ -130,15 +130,38 @@ services:
     environment:
      <<: *shared-env
      OASIS_MODEL_SUPPLIER_ID: OasisLMF
-     OASIS_MODEL_ID: UCLFITTER
+     OASIS_MODEL_ID: UCLFITTER-java
      OASIS_MODEL_VERSION_ID: 'v1'
      OASIS_RUN_MODE: v1
-     OASIS_KEEP_RUN_DIR: 1
+     OASIS_KEEP_RUN_DIR: True
     volumes:
-     - ../model_data/:/home/worker/model/model_data:rw
-     - ../keys_data/:/home/worker/model/keys_data:rw
+     - ../model_data/java/:/home/worker/model/model_data:rw
+     - ../keys_data/java/:/home/worker/model/keys_data:rw
      - ../meta-data/:/home/worker/model/meta-data:rw
-     - ./oasislmf.json:/home/worker/model/oasislmf.json:rw
+     - ./oasislmf_java.json:/home/worker/model/oasislmf.json:rw
+     - filestore-OasisData:/shared-fs:rw
+
+  v1-worker-sumatra:
+    restart: always
+    image: ${WORKER_IMG:-coreoasis/model_worker}:${VERS_WORKER:-latest}
+    build:
+      context: .
+      dockerfile: Dockerfile.model_worker
+    links:
+     - celery-db
+     - broker:mybroker
+    environment:
+     <<: *shared-env
+     OASIS_MODEL_SUPPLIER_ID: OasisLMF
+     OASIS_MODEL_ID: UCLFITTER-sumatra
+     OASIS_MODEL_VERSION_ID: 'v1'
+     OASIS_RUN_MODE: v1
+     OASIS_KEEP_RUN_DIR: True
+    volumes:
+     - ../model_data/sumatra/:/home/worker/model/model_data:rw
+     - ../keys_data/sumatra/:/home/worker/model/keys_data:rw
+     - ../meta-data/:/home/worker/model/meta-data:rw
+     - ./oasislmf_sumatra.json:/home/worker/model/oasislmf.json:rw
      - filestore-OasisData:/shared-fs:rw
   v2-worker:
     restart: always
