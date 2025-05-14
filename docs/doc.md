@@ -161,7 +161,7 @@
 | haz_intensity_bin_dict | Intensity Bin Dictionary file for FITTER model | Hazard intensity measure ranges used in model | text/csv | csv |  |  |  | resources/haz/intensity_bin_dict.csv |  |  |
 
 #### Intensity Bin Dictionary file for FITTER model
-File (intensity_bin_dict.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/haz/intensity_bin_dict.csv)
+File (intensity_bin_dict.csv) found [here](resources/haz/intensity_bin_dict.csv)
 
 First 10 rows displayed only
 
@@ -257,7 +257,7 @@ First 10 rows displayed only
 | location | Example location file | A sample exposure location file which can be run through the model. | text/csv | csv |  |  |  | resources/exp/location.csv |  |  |
 
 #### Exposure Required Fields
-File (ExposureRequiredFields.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/exp/ExposureRequiredFields.csv)
+File (ExposureRequiredFields.csv) found [here](resources/exp/ExposureRequiredFields.csv)
 
 First 10 rows displayed only
 
@@ -269,7 +269,7 @@ First 10 rows displayed only
 | Longitude | OED | location | The longitude of the location (decimal) | Floating point number |
 
 #### Example account file
-File (account.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/exp/account.csv)
+File (account.csv) found [here](resources/exp/account.csv)
 
 First 10 rows displayed only
 
@@ -278,7 +278,7 @@ First 10 rows displayed only
 | 1 | 1 | IDR | 1 | QTS |
 
 #### Example location file
-File (location.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/exp/location.csv)
+File (location.csv) found [here](resources/exp/location.csv)
 
 First 10 rows displayed only
 
@@ -400,7 +400,7 @@ First 10 rows displayed only
 | vulnerability_dict | Vulnerability function dictionary | A list of vulnerability functions used in the model with associated attributes | text/csv | csv |  |  |  | resources/vln/vulnerability_dict.csv |  |  |
 
 #### Vulnerability function dictionary
-File (vulnerability_dict.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/vln/vulnerability_dict.csv)
+File (vulnerability_dict.csv) found [here](resources/vln/vulnerability_dict.csv)
 
 First 10 rows displayed only
 
@@ -489,7 +489,7 @@ First 10 rows displayed only
 | analysis_settings | Analysis settings for modelled losses | The Oasis analysis settings file for modelled losses of sample exposure location file. | application/json | json |  |  |  | resources/los/analysis_settings.json |  |  |
 
 #### Ground up AAL
-File (gul_S1_aalcalc.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/los/gul_S1_aalcalc.csv)
+File (gul_S1_aalcalc.csv) found [here](resources/los/gul_S1_aalcalc.csv)
 
 First 10 rows displayed only
 
@@ -499,7 +499,7 @@ First 10 rows displayed only
 | 1 | 2 | 160.777295 | 3516.486117 |
 
 #### Ground up ELT
-File (gul_S1_eltcalc.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/los/gul_S1_eltcalc.csv)
+File (gul_S1_eltcalc.csv) found [here](resources/los/gul_S1_eltcalc.csv)
 
 First 10 rows displayed only
 
@@ -517,7 +517,7 @@ First 10 rows displayed only
 | 1 | 2 | 23 | 4026.737793 | 2375.948730 | 150000.000000 |
 
 #### Ground up Aggregate LEC
-File (gul_S1_leccalc_full_uncertainty_aep.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/los/gul_S1_leccalc_full_uncertainty_aep.csv)
+File (gul_S1_leccalc_full_uncertainty_aep.csv) found [here](resources/los/gul_S1_leccalc_full_uncertainty_aep.csv)
 
 First 10 rows displayed only
 
@@ -535,7 +535,7 @@ First 10 rows displayed only
 | 1 | 1 | 910.000000 | 44611.835938 |
 
 #### Ground up Occurrence LEC
-File (gul_S1_leccalc_full_uncertainty_oep.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/los/gul_S1_leccalc_full_uncertainty_oep.csv)
+File (gul_S1_leccalc_full_uncertainty_oep.csv) found [here](resources/los/gul_S1_leccalc_full_uncertainty_oep.csv)
 
 First 10 rows displayed only
 
@@ -553,7 +553,7 @@ First 10 rows displayed only
 | 1 | 1 | 910.000000 | 44611.835938 |
 
 #### Ground up Summary Info
-File (gul_S1_summary-info.csv) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/los/gul_S1_summary-info.csv)
+File (gul_S1_summary-info.csv) found [here](resources/los/gul_S1_summary-info.csv)
 
 First 10 rows displayed only
 
@@ -562,7 +562,7 @@ First 10 rows displayed only
 | 1 | All-Risks | 1500000.0 |
 
 #### Analysis settings for modelled losses
-File (analysis_settings.json) found [here](/home/anish/Documents/github/UCLFitter/docs/resources/los/analysis_settings.json)
+File (analysis_settings.json) found [here](resources/los/analysis_settings.json)
 
 Cannot display preview for json files
 
