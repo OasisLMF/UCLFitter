@@ -15,10 +15,13 @@
      },
     "lookup_settings":{
         "supported_perils":[
-           {"id": "QTS", "desc": "Single Peril: Tsunami"},
+           {"id": "QTS", "desc": "Single Peril: Tsunami", "peril_correlation_group": 1}
         ]
     },
+    "correlation_settings": [
+	    {"peril_correlation_group":  1, "damage_correlation_value":  "1"}
+    ],
     "data_settings": {
-	"group_fields": ["PortNumber", "AccNumber", "LocNumber"]
+	    "damage_group_fields": ["PortNumber", "AccNumber", "LocNumber"]
     }
 }

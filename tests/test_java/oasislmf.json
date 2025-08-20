@@ -4,6 +4,7 @@
     "lookup_data_dir": "../../keys_data/java",
     "model_data_dir": "../../model_data/java",
     "oed_location_csv": "location.csv",
-    "oed_accounts_csv": "account.csv",
-    "model_run_dir": "runs/test_java"
+    "oed_account_csv": "account.csv",
+    "model_run_dir": "runs/test_java",
+    "model_settings_json": "../../meta-data/model_settings.json"
 }

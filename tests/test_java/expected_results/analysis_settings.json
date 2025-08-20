@@ -5,7 +5,10 @@
     "model_supplier_id": "UCL",
     "gul_threshold": 0,
     "gul_output": true,
-    "model_settings": {},
+    "model_settings": {
+        "event_set": "",
+        "event_occurrence_id": ""
+    },
     "number_of_samples": 10,
     "gul_summaries": [
         {
@@ -18,8 +21,8 @@
                 "elt_quantile": false,
                 "elt_moment": true,
                 "alt_period": true,
-                "ept_full_uncertainty_aep": false,
-                "ept_full_uncertainty_oep": false,
+                "ept_full_uncertainty_aep": true,
+                "ept_full_uncertainty_oep": true,
                 "ept_mean_sample_aep": false,
                 "ept_mean_sample_oep": false,
                 "ept_per_sample_mean_aep": false,
@@ -30,7 +33,7 @@
             }
         }
     ],
-    "il_output": false,
+    "il_output": true,
     "il_summaries": [
         {
             "id": 1,
@@ -42,8 +45,8 @@
                 "elt_quantile": false,
                 "elt_moment": true,
                 "alt_period": true,
-                "ept_full_uncertainty_aep": false,
-                "ept_full_uncertainty_oep": false,
+                "ept_full_uncertainty_aep": true,
+                "ept_full_uncertainty_oep": true,
                 "ept_mean_sample_aep": false,
                 "ept_mean_sample_oep": false,
                 "ept_per_sample_mean_aep": false,
@@ -54,6 +57,28 @@
             }
         }
     ],
+    "lookup_settings": {
+        "supported_perils": [
+            {
+                "id": "QTS",
+                "desc": "Single Peril: Tsunami",
+                "peril_correlation_group": 1
+            }
+        ]
+    },
+    "correlation_settings": [
+        {
+            "peril_correlation_group": 1,
+            "damage_correlation_value": "1"
+        }
+    ],
+    "data_settings": {
+        "damage_group_fields": [
+            "PortNumber",
+            "AccNumber",
+            "LocNumber"
+        ]
+    },
     "ri_output": false,
     "ri_summaries": [],
     "rl_output": false,
