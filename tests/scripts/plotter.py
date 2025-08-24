@@ -1,17 +1,20 @@
-import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from matplotlib.ticker import FuncFormatter
 
 # Configuration options
 USE_LOG_SCALE_X = False  # Set to True for log scale on x-axis (Return Periods)
 USE_LOG_SCALE_Y = False  # Set to True for log scale on y-axis (Loss)
+DATA_PATH = "../test_java/runs/test_java/output/gul_S1_ept.csv"
+PLOT_PATH_PNG = "../test_java/runs/test_java/output/gul_S1_ept.png"
+PLOT_PATH_PDF = "../test_java/runs/test_java/output/gul_S1_ept.pdf"
 
 # Set modern style
 plt.style.use("default")  # Using default style for compatibility
 
 # Load the CSV file
-df = pd.read_csv("runs/test_java/output/gul_S1_ept.csv")
+df = pd.read_csv(DATA_PATH)
 df = df[df.iloc[:, 1] == 2]
 df = df[df.iloc[:, 2] == 3]
 
@@ -75,13 +78,13 @@ def idr_currency_formatter(x: float, _) -> str:
     """Format float values as IDR currency."""
 
     if x >= 1e12:
-        return f"Rp{x/1e12:.1f}T"
+        return f"Rp{x / 1e12:.1f}T"
     if x >= 1e9:
-        return f"Rp{x/1e9:.1f}B"
+        return f"Rp{x / 1e9:.1f}B"
     if x >= 1e6:
-        return f"Rp{x/1e6:.1f}M"
+        return f"Rp{x / 1e6:.1f}M"
     if x >= 1e3:
-        return f"Rp{x/1e3:.1f}K"
+        return f"Rp{x / 1e3:.1f}K"
     return f"Rp{x:,.0f}"
 
 
@@ -151,7 +154,7 @@ plt.tight_layout(pad=2.0)
 
 # Save with high quality
 plt.savefig(
-    "runs/test_java/output/gul_S1_ept.png",
+    PLOT_PATH_PNG,
     dpi=300,
     bbox_inches="tight",
     facecolor="white",
@@ -160,7 +163,7 @@ plt.savefig(
 
 # Also save as PDF for vector graphics
 plt.savefig(
-    "runs/test_java/output/gul_S1_ept.pdf",
+    PLOT_PATH_PDF,
     bbox_inches="tight",
     facecolor="white",
     edgecolor="none",
