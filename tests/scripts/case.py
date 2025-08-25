@@ -191,9 +191,9 @@ class Policy2(InputData):
         """
         # Default damage slabs and payouts if not provided
         if damage_slab is None:
-            damage_slab = [0.3, 0.4, 0.3]  # Example: 30%, 40%, 30%
+            raise ValueError("damage_slab must be provided")
         if payout is None:
-            payout = [7.5e6, 19e6, 30e6]  # Example payouts
+            raise ValueError("payout must be provided")
 
         # Validate inputs
         if len(damage_slab) != len(payout):
@@ -487,8 +487,8 @@ def create_new_test_case(
     # For Policy2, we can pass custom damage slabs and payouts
     if hasattr(input_data, "edit_account") and input_data_class == Policy2:
         # Example with custom damage slabs and payouts
-        custom_damage_slab = [0.25, 0.35, 0.4]  # 25%, 35%, 40%
-        custom_payout = [50000, 150000, 300000]  # Progressive payouts
+        custom_damage_slab = [0.3, 0.4, 0.3]  # 30%, 40%, 30%
+        custom_payout = [7.5e6, 19e6, 30e6]  # Progressive payouts
         input_data.edit_account(damage_slab=custom_damage_slab, payout=custom_payout)
     else:
         input_data.edit_account()
