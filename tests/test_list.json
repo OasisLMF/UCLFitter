@@ -1,6 +1,12 @@
 [
-  {
-    "name": "Base Test",
-    "base_path": "../test_java/"
-  }
+    {
+        "name": "Base Test",
+        "description": "Base test case for all policies",
+        "base_path": "../test_java/"
+    },
+    {
+        "name": "Policy Test 2",
+        "base_path": "../test_policy_test_2",
+        "description": "Test case with damage-dependent policies v2"
+    }
 ]

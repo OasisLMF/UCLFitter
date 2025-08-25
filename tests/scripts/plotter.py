@@ -6,16 +6,16 @@ from matplotlib.ticker import FuncFormatter
 # Configuration options
 USE_LOG_SCALE_X = False  # Set to True for log scale on x-axis (Return Periods)
 USE_LOG_SCALE_Y = False  # Set to True for log scale on y-axis (Loss)
-DATA_PATH = "../test_java/runs/test_java/output/gul_S1_ept.csv"
-PLOT_PATH_PNG = "../test_java/runs/test_java/output/gul_S1_ept.png"
-PLOT_PATH_PDF = "../test_java/runs/test_java/output/gul_S1_ept.pdf"
+DATA_PATH = "../test_policy_test_2/runs/test_java/output/gul_S1_ept.csv"
+PLOT_PATH_PNG = "../test_policy_test_2/runs/test_java/output/gul_S1_ept.png"
+PLOT_PATH_PDF = "../test_policy_test_2/runs/test_java/output/gul_S1_ept.pdf"
 
 # Set modern style
 plt.style.use("default")  # Using default style for compatibility
 
 # Load the CSV file
 df = pd.read_csv(DATA_PATH)
-df = df[df.iloc[:, 1] == 2]
+df = df[df.iloc[:, 1] == 1]
 df = df[df.iloc[:, 2] == 3]
 
 # Create figure with custom layout
