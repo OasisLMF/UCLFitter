@@ -488,7 +488,7 @@ def create_new_test_case(
     if hasattr(input_data, "edit_account") and input_data_class == Policy2:
         # Example with custom damage slabs and payouts
         custom_damage_slab = [0.3, 0.4, 0.3]  # 30%, 40%, 30%
-        custom_payout = [7.5e6, 19e6, 30e6]  # Progressive payouts
+        custom_payout = [7.5e6, 19e6, 38e6]  # Progressive payouts
         input_data.edit_account(damage_slab=custom_damage_slab, payout=custom_payout)
     else:
         input_data.edit_account()
