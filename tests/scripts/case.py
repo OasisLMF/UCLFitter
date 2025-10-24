@@ -288,6 +288,86 @@ class Policy2(InputData):
         pass
 
 
+class Policy3(InputData):
+    """Implementation of InputData for damage-dependent test cases."""
+
+    def edit_account(self, payout: float):
+        """
+        Ensure account dataframe has at least one row for each AccNumber in location,
+        then create damage slabs with trigger ranges and payouts.
+
+        Args:
+            damage_slab: List of floats representing damage slab sizes (will be normalized to sum to 1)
+            payout: List of int/float representing payouts for each slab (same length as damage_slab)
+        """
+
+        if payout < 0 or payout > 1:
+            raise ValueError("Payout must be between 0 and 1")
+
+        # Ensure we have accounts for all locations first
+        self.account = ensure_accounts_for_locations(self.account, self.location)
+
+        # Store the original account data
+        original_accounts = self.account.copy()
+
+        # original_accounts = original_accounts[:10]
+
+        # Create new rows for each damage slab
+        new_account_rows = []
+
+        for _, account_row in original_accounts.iterrows():
+
+            print(f"Processing AccNumber: {account_row['AccNumber']}")
+            # Calculate trigger ranges for this account
+            # Create a copy of the account row for this slab
+            new_row = account_row.copy()
+
+            # Set trigger ranges
+            trigger_start = 0.0
+            trigger_end = 1.0
+
+            # Add the new columns
+            new_row["TriggerBuildingStart"] = trigger_start
+            new_row["TriggerBuildingEnd"] = trigger_end
+            new_row["PayOutBuildingStart"] = payout
+            new_row["PayOutBuildingEnd"] = ""
+            new_row["DeductibleBuilding"] = ""
+            new_row["StepTriggerType"] = 1
+            new_row["TriggerType"] = 2
+            new_row["StepFunctionName"] = 28 if trigger_end == 1 else 27
+            new_row["PayOutType"] = 1 if trigger_end == 1 else 2
+            new_row["PayoutLimitBuilding"] = 1e20
+            new_row["StepNumber"] = 1
+            new_row["PolPeril"] = "QTS"
+
+            new_account_rows.append(new_row)
+
+        # Replace the account dataframe with the new slab-based structure
+        if new_account_rows:
+            self.account = pd.DataFrame(new_account_rows).reset_index(drop=True)
+
+            # Sort by AccNumber and then by TriggerBuildingStart for organization
+            self.account = self.account.sort_values(
+                ["AccNumber", "TriggerBuildingStart"]
+            ).reset_index(drop=True)
+
+            print(f"Created {len(self.account)} account rows with percentage payout")
+        else:
+            print("No account rows were created")
+
+    def edit_analysis_settings(self):
+        # Example edit: Change analysis type to damage-dependent
+        pass
+
+    def edit_location(self):
+        # Each location has its own account number
+        self.location["AccNumber"] = self.location["LocNumber"]
+
+    def edit_configuration(self):
+        # Example edit: Update configuration for damage-dependent analysis
+        pass
+
+
 @dataclass
 class TestCase:
     """Class representing a test case for the software."""
@@ -490,6 +570,11 @@ def create_new_test_case(
         custom_damage_slab = [0.3, 0.4, 0.3]  # 30%, 40%, 30%
         custom_payout = [7.5e6, 19e6, 38e6]  # Progressive payouts
         input_data.edit_account(damage_slab=custom_damage_slab, payout=custom_payout)
+
+    elif hasattr(input_data, "edit_account") and input_data_class == Policy3:
+        # Example with custom payout percentage
+        custom_payout = 0.20  # 20% payout
+        input_data.edit_account(payout=custom_payout)
     else:
         input_data.edit_account()
 
@@ -565,12 +650,33 @@ def main():
     #     print(f"Error with base test: {e}")
 
     # Example 2: Create a new test case with Policy2 modifications
+    # print("\n=== Creating new test case ===")
+    # try:
+    #     new_test = create_new_test_case(
+    #         name="Policy Test 2",
+    #         description="Test case with damage-dependent policies v2",
+    #         input_data_class=Policy2,
+    #         base_test_path="../test_java",
+    #         overwrite=True,
+    #     )
+    #     print(f"Successfully created test case: {new_test.name}")
+
+    #     # Run the new test with different options
+    #     print("\n--- Running new test with verbose output ---")
+    #     success = new_test.run_test(verbose=True)
+    #     print(f"New test {'PASSED' if success else 'FAILED'}")
+
+    # except (FileNotFoundError, ValueError) as e:
+    #     print(f"Error creating test case: {e}")
+
+    # Policy 3 example
+
     print("\n=== Creating new test case ===")
     try:
         new_test = create_new_test_case(
-            name="Policy Test 2",
-            description="Test case with damage-dependent policies v2",
-            input_data_class=Policy2,
+            name="Policy Test 3",
+            description="Test case with percentage-based payout policy",
+            input_data_class=Policy3,
             base_test_path="../test_java",
             overwrite=True,
         )
