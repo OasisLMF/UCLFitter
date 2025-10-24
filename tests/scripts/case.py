@@ -368,6 +368,112 @@ class Policy3(InputData):
         pass
 
 
+class Policy4(InputData):
+    """Implementation of InputData for damage-dependent test cases."""
+
+    def edit_account(self, threshold: float):
+        """
+        Ensure account dataframe has at least one row for each AccNumber in location,
+        then create damage slabs with trigger ranges and payouts.
+
+        Args:
+            damage_slab: List of floats representing damage slab sizes (will be normalized to sum to 1)
+            payout: List of int/float representing payouts for each slab (same length as damage_slab)
+        """
+
+        # Ensure we have accounts for all locations first
+        self.account = ensure_accounts_for_locations(self.account, self.location)
+
+        sorted_tiv = sorted(self.location["BuildingTIV"])
+
+        threshold_tiv_index = int(len(sorted_tiv) * threshold)
+
+        threshold_tiv = sorted_tiv[threshold_tiv_index]
+
+        payout = [
+            0.99 if tiv < threshold_tiv else 0.01
+            for tiv in list(self.location["BuildingTIV"])
+        ]
+
+        # print(payout[0])
+
+        # print(threshold_tiv)
+
+        # print("Min TIV:", min(self.location["BuildingTIV"]))
+        # print("Max TIV:", max(self.location["BuildingTIV"]))
+
+        # print(
+        #     (max(self.location["BuildingTIV"]) - min(self.location["BuildingTIV"]))
+        #     * threshold
+        #     + min(self.location["BuildingTIV"])
+        # )
+
+        # exit()
+
+        # Store the original account data
+        original_accounts = self.account.copy()
+
+        # original_accounts = original_accounts[:10]
+
+        # Create new rows for each damage slab
+        new_account_rows = []
+
+        index = 0
+        for _, account_row in original_accounts.iterrows():
+
+            print(f"Processing AccNumber: {account_row['AccNumber']}")
+            # Calculate trigger ranges for this account
+            # Create a copy of the account row for this slab
+            new_row = account_row.copy()
+
+            # Set trigger ranges
+            trigger_start = 0.0
+            trigger_end = 1.0
+
+            # Add the new columns
+            new_row["TriggerBuildingStart"] = trigger_start
+            new_row["TriggerBuildingEnd"] = trigger_end
+            new_row["PayOutBuildingStart"] = payout[index]
+            new_row["PayOutBuildingEnd"] = ""
+            new_row["DeductibleBuilding"] = ""
+            new_row["StepTriggerType"] = 1
+            new_row["TriggerType"] = 2
+            new_row["StepFunctionName"] = 28 if trigger_end == 1 else 27
+            new_row["PayOutType"] = 1 if trigger_end == 1 else 2
+            new_row["PayoutLimitBuilding"] = 1e20
+            new_row["StepNumber"] = 1
+            new_row["PolPeril"] = "QTS"
+
+            new_account_rows.append(new_row)
+
+            index += 1
+
+        # Replace the account dataframe with the new slab-based structure
+        if new_account_rows:
+            self.account = pd.DataFrame(new_account_rows).reset_index(drop=True)
+
+            # Sort by AccNumber and then by TriggerBuildingStart for organization
+            self.account = self.account.sort_values(
+                ["AccNumber", "TriggerBuildingStart"]
+            ).reset_index(drop=True)
+
+            print(f"Created {len(self.account)} account rows with percentage payout")
+        else:
+            print("No account rows were created")
+
+    def edit_analysis_settings(self):
+        # Example edit: Change analysis type to damage-dependent
+        pass
+
+    def edit_location(self):
+        # Each location has its own account number
+        self.location["AccNumber"] = self.location["LocNumber"]
+
+    def edit_configuration(self):
+        # Example edit: Update configuration for damage-dependent analysis
+        pass
+
+
 @dataclass
 class TestCase:
     """Class representing a test case for the software."""
@@ -575,6 +681,12 @@ def create_new_test_case(
         # Example with custom payout percentage
         custom_payout = 0.20  # 20% payout
         input_data.edit_account(payout=custom_payout)
+
+    elif hasattr(input_data, "edit_account") and input_data_class == Policy4:
+        # Example with custom threshold
+        custom_threshold = 0.15  # 15% threshold
+        input_data.edit_account(threshold=custom_threshold)
+
     else:
         input_data.edit_account()
 
@@ -674,9 +786,9 @@ def main():
     print("\n=== Creating new test case ===")
     try:
         new_test = create_new_test_case(
-            name="Policy Test 3",
+            name="Policy Test 4",
             description="Test case with percentage-based payout policy",
-            input_data_class=Policy3,
+            input_data_class=Policy4,
             base_test_path="../test_java",
             overwrite=True,
         )

@@ -13,5 +13,10 @@
         "name": "Policy Test 3",
         "base_path": "../test_policy_test_3",
         "description": "Test case with percentage-based payout policy"
+    },
+    {
+        "name": "Policy Test 4",
+        "base_path": "../test_policy_test_4",
+        "description": "Test case with percentage-based payout policy"
     }
 ]
