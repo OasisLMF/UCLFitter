@@ -386,29 +386,18 @@ class Policy4(InputData):
 
         sorted_tiv = sorted(self.location["BuildingTIV"])
 
-        threshold_tiv_index = int(len(sorted_tiv) * threshold)
+        max_tiv = max(sorted_tiv)
+        min_tiv = min(sorted_tiv)
+        threshold = (max_tiv - min_tiv) * threshold + min_tiv
 
-        threshold_tiv = sorted_tiv[threshold_tiv_index]
+        # threshold_tiv_index = int(len(sorted_tiv) * threshold)
+
+        # threshold_tiv = sorted_tiv[threshold_tiv_index]
 
         payout = [
-            0.99 if tiv < threshold_tiv else 0.01
+            0.99 if tiv < threshold else 0.01
             for tiv in list(self.location["BuildingTIV"])
         ]
-
-        # print(payout[0])
-
-        # print(threshold_tiv)
-
-        # print("Min TIV:", min(self.location["BuildingTIV"]))
-        # print("Max TIV:", max(self.location["BuildingTIV"]))
-
-        # print(
-        #     (max(self.location["BuildingTIV"]) - min(self.location["BuildingTIV"]))
-        #     * threshold
-        #     + min(self.location["BuildingTIV"])
-        # )
-
-        # exit()
 
         # Store the original account data
         original_accounts = self.account.copy()
@@ -679,12 +668,12 @@ def create_new_test_case(
 
     elif hasattr(input_data, "edit_account") and input_data_class == Policy3:
         # Example with custom payout percentage
-        custom_payout = 0.20  # 20% payout
+        custom_payout = 0.30  # 30% payout
         input_data.edit_account(payout=custom_payout)
 
     elif hasattr(input_data, "edit_account") and input_data_class == Policy4:
         # Example with custom threshold
-        custom_threshold = 0.15  # 15% threshold
+        custom_threshold = 0.2  # 20% threshold
         input_data.edit_account(threshold=custom_threshold)
 
     else:

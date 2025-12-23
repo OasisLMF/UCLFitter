@@ -6,25 +6,37 @@ from matplotlib.ticker import FuncFormatter
 # Configuration options
 USE_LOG_SCALE_X = False  # Set to True for log scale on x-axis (Return Periods)
 USE_LOG_SCALE_Y = False  # Set to True for log scale on y-axis (Loss)
-DATA_PATH = "../test_policy_test_3/runs/test_java/output/il_S1_ept.csv"
-PLOT_PATH_PNG = "../test_policy_test_3/runs/test_java/output/il_S1_ept.png"
-PLOT_PATH_PDF = "../test_policy_test_3/runs/test_java/output/il_S1_ept.pdf"
+
+
+DATA_PATH_1 = "../test_policy_test_2/runs/test_java/output/il_S1_ept.csv"
+DATA_PATH_2 = "../test_policy_test_2/runs/test_java/output/gul_S1_ept.csv"
+PLOT_PATH_PNG = (
+    "../test_policy_test_2/runs/test_java/output/return_period_vs_uninsured_loss.png"
+)
+PLOT_PATH_PDF = (
+    "../test_policy_test_2/runs/test_java/output/return_period_vs_uninsured_loss.pdf"
+)
 
 # Set modern style
 plt.style.use("default")  # Using default style for compatibility
 
 # Load the CSV file
-df = pd.read_csv(DATA_PATH)
-df = df[df.iloc[:, 1] == 1]
-df = df[df.iloc[:, 2] == 3]
+df1 = pd.read_csv(DATA_PATH_1)
+df1 = df1[df1.iloc[:, 1] == 1]
+df1 = df1[df1.iloc[:, 2] == 3]
+
+df2 = pd.read_csv(DATA_PATH_2)
+df2 = df2[df2.iloc[:, 1] == 1]
+df2 = df2[df2.iloc[:, 2] == 3]
+
 
 # Create figure with custom layout
 fig, ax = plt.subplots(figsize=(14, 8), dpi=300)
 fig.patch.set_facecolor("#f8f9fa")
 
 # Extract data
-return_periods = df.iloc[:, -2]
-losses = df.iloc[:, -1]
+return_periods = df1.iloc[:, -2]
+losses = df2.iloc[:, -1] - df1.iloc[:, -1]
 
 # Create gradient colors based on loss magnitude
 # colors = plt.cm.plasma(np.linspace(0, 1, len(losses)))
